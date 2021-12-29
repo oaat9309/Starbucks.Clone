@@ -1,0 +1,93 @@
+/*google fonts - */
+/*font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Pushster', cursive;
+font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&family=Pushster&family=Roboto:wght@300;500&display=swap');
+
+
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+/*header*/
+header {
+
+}
+
+header .inner {
+  width: 1100px;
+  margin: 0 auto;
+  height: 120px;
+  position: relative;
+  background-color: orange;
+}
+
+header .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 75px;
+  display: none;
+}
+
+header .sub-menu {
+
+}
+
+header .sub-menu ul.menu {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #656565;
+  padding: 11px 16px;
+  display: block;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+
+}
+
+header .sub-menu .search input {
+
+}
+
+header .sub-menu .search .icon {
+
+}
