@@ -11,6 +11,7 @@ body {
   font-weight: 300;
   line-height: 1.4;
   font-family: 'Noto Sans KR', sans-serif;
+  height: 3000px;
 }
 
 img {
@@ -27,10 +28,44 @@ a {
   position: relative;
 }
 
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn.btn__reverse {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn__reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
 /*header*/
 header {
+  width: 100%;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 5;
 }
 
 header .inner {
@@ -215,3 +250,74 @@ header .main-menu .item .item__contents .contents__texture p {
   margin: 4px 0 14px;
 }
 
+/*Badge*/
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.3);
+}
+
+/* Visual */
+.visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+}
+
+.visual .title {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+}
+
+.visual .title .btn {
+  margin-top: 20px; 
+  color: #5E4040;
+  border-color: #5E4040;
+}
+
+.visual .title .btn:hover {
+  color: #fff;
+  background-color: #5E4040;
+}
+
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 270px;
+}
+
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 170px;
+}
+
+.visual .cup2.text {
+  position: absolute;
+  bottom: 230px;
+  right: 450px;
+}
+
+.visual .spoon {
+  position: absolute;
+  bottom: 10px;
+  right: 370px;
+}
