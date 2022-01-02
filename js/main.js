@@ -90,3 +90,20 @@ promotionToggelBtn.addEventListener('click', () => {
     promotionEl.classList.remove('hide')
   }
 })
+
+
+/* Floating Animation */
+
+function floatingObject(selector, delay, size) {
+  gsap.to(selector, Math.random(1.5, 2.5), {
+    y: size,
+    repeat: -1,  // -1이면 무한반복
+    yoyo: true,
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  })
+}
+
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', .5, 15)
+floatingObject('.floating3', 1.5, 20)
