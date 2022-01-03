@@ -26,15 +26,30 @@ window.addEventListener('scroll', _.throttle(function() {
       opacity: 0,
       display: 'none'
     })
+    gsap.to('#to-top', .2, {
+      x: 0
+    })
   }
   else {
     gsap.to(badgeEl, .3, {
       opacity: 1,
       display: 'block'
     })
+    gsap.to('#to-top', .2, {
+      x: 100
+    })
   }
 }, 300)) 
 // _.throttle(함수, 시간)
+
+/* Scroll to top Btn */
+
+const toTop = document.querySelector('#to-top') 
+toTop.addEventListener('click', () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 
 /* Visual Animation */
@@ -74,6 +89,13 @@ new Swiper('.promotion .swiper-container', {
   }
 })
 
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+})
+
 
 /* Toggle Promotion */
 
@@ -92,18 +114,23 @@ promotionToggelBtn.addEventListener('click', () => {
 })
 
 
-/* Floating Animation */
+/* Scroll Animation */
 
-function floatingObject(selector, delay, size) {
-  gsap.to(selector, Math.random(1.5, 2.5), {
-    y: size,
-    repeat: -1,  // -1이면 무한반복
-    yoyo: true,
-    ease: Power1.easeInOut,
-    delay: random(0, delay)
-  })
-}
+const spyEls = document.querySelectorAll('section.scroll-spy')
 
-floatingObject('.floating1', 1, 15)
-floatingObject('.floating2', .5, 15)
-floatingObject('.floating3', 1.5, 20)
+spyEls.forEach((spyEl) => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl,  // 보여짐 여부를 감시할 요소 지정
+      triggerHook: .8
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller())
+})
+
+
+/* Footer Year */
+
+const thisYear = document.querySelector('.this-year')
+thisYear.innerText = new Date().getFullYear()
+
