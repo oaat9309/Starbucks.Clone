@@ -47,7 +47,7 @@ window.addEventListener('scroll', _.throttle(function() {
 const toTop = document.querySelector('#to-top') 
 toTop.addEventListener('click', () => {
   gsap.to(window, .7, {
-    scrollTo: 0
+    scrollTo: 0 
   })
 })
 

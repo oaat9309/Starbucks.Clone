@@ -212,10 +212,6 @@ header .main-menu {
   z-index: 1;
 }
 
-header .main-menu .item {
-  
-}
-
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: 'Roboto', sans-serif;
@@ -512,6 +508,7 @@ header .badges .badge {
   bottom: 40px;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 .notice .promotion .swiper-pagination .swiper-pagination-bullet {
@@ -811,6 +808,7 @@ header .badges .badge {
   color: #669900;
   background-color: #fff;
   border-color: #669900;
+  width: 150px;
   position: absolute;
   top: 240px;
   left: 0;
@@ -995,4 +993,9 @@ footer .logo {
   bottom: 30px;
   right: 30px;
   z-index: 5;
+  transition: .3s;
+}
+
+#to-top:hover {
+  background-color: black;
 }
